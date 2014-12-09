@@ -1,6 +1,38 @@
 <ul id="list" class="mui-table-view mui-table-view-chevron">
 	<% for(var i = 0; i < data.length; i++) {
-		var item = data[i]; %>
-		<li class="mui-table-view-cell"><a class="mui-navigate-right" href="wall-frame.html?wallKey=<%=item.key%>&wallName=<%=item.name%>&address=<%=item.address%>&telephone=<%=item.telephone%>&lat=<%=item.location.lat%>&lng=<%=item.location.lng%>"><%=item.name%></a></li>
+		var item = data[i];
+		try{
+			var type = item.tag.split(';')[0];
+			switch(type) {
+				case '公司企业':
+					item.icon = ' icon--building';
+					break;
+				case '休闲娱乐':
+					item.icon = ' icon--headphone';
+					break;
+				case '美食':
+					item.icon = ' icon--cup';
+					break;
+				case '文化传媒':
+					item.icon = ' icon--image';
+					break;
+				case '旅游景点':
+					item.icon = ' icon--earth';
+					break;
+				default:
+					item.icon = ' icon--location';
+			}
+		}catch(e){}
+		%>
+		<li class="mui-table-view-cell wall-item">
+			<a class="mui-navigate-right" href="wall-frame.html?wallKey=<%=item.key%>&wallName=<%=item.name%>&address=<%=item.address%>&telephone=<%=item.telephone%>&lat=<%=item.location.lat%>&lng=<%=item.location.lng%>">
+			    <span class="icon2<%=item.icon%>"></span>
+			    <div class="wall-item-content">
+					<div class="wall-item-content__name"><%=item.name%></div>
+					<p class="wall-item-content__count">这里有<%=item.message_count%>条留言</p>
+				</div>
+			</a>
+		</li>
+
 	<% } %>
 </ul>

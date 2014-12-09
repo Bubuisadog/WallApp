@@ -42,7 +42,7 @@ define([], function(){
 					wallKey: wall.key || '',
 					words: topic.words || '',
 					imgUrl: topic.imgUrl || '',
-					userId: user.id || ''
+					userId: user.name || ''
 				},
 				dataType: 'json'
 			});

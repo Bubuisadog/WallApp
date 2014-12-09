@@ -18,6 +18,7 @@ define([
 				alert('WallList接口返回错误码' + data.errno);
 				return plus.webview.currentWebview().reload();
 			}
+//			alert(JSON.stringify(data.data.pois));
 			var wallListHtml = Template.tmpl(tplWallList, {data: data.data.pois});
 			wallListContainer.innerHTML = wallListHtml;
 		}).fail(function(){

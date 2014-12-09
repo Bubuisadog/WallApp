@@ -7,23 +7,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="css/mui.min.css">
-		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<script src="../js/mui.min.js"></script>
 		<style type="text/css">
-			#list {
-				/*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
-				margin-top: -1px;
+			body {
+				padding: 10px;
 			}
 		</style>
 	</head>
 
 	<body>
-		<div class="mui-content">
-			<ul id="list" class="mui-table-view mui-table-view-chevron">
-			</ul>
-		</div>
+		<button class="mui-btn mui-btn-negative mui-btn-block mui-btn-outlined js-exit">退出登录</button>
+		
 		<script>
+			mui.init();
+			mui.ready(function(){
+				mui('body')
+				.on('tap', '.js-exit', function(){
+					plus.storage.removeItem('username');
+					mui.openWindow({
+						id: 'login.html',
+						url: 'login.html'
+					});
+				});
+			});
 		</script>
 	</body>
-
 </html>

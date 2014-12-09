@@ -14,6 +14,40 @@
             width: 30px;
             height: 23px;
         }
+.icon2 {
+	background: url(../img/icon.png) no-repeat;
+	display: inline-block;
+}
+	.icon--building {
+		background-position: 0px 0px;
+		width: 30px;
+		height: 32px;
+	}
+	.icon--earth {
+		background-position: 1px 1px;
+		width: 28px;
+		height: 28px;
+	}
+	.icon--cup {
+		background-position: 1px 1px;
+		width: 19px;
+		height: 33px;
+	}
+	.icon--headphone {
+		background-position: 1px 1px;
+		width: 26px;
+		height: 25px;
+	}
+	.icon--image {
+		background-position: 1px 1px;
+		width: 26px;
+		height: 25px;
+	}
+	.icon--location {
+		background-position: 1px 1px;
+		width: 22px;
+		height: 28px;
+	}
         
 .mui-bar-nav {
 	background: #ffd600;

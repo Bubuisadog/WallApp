@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/common.css" rel="stylesheet"/>
+    <link href="../css/login.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">来过</h1>
+	</header>
+	<div class="mui-content-padded">
+		<form class="mui-input-group form-login js-form-login">
+			<div class="mui-input-row">
+				<label>账号</label>
+				<input name="name" type="text" class="mui-input-clear" placeholder="手机号或邮箱">
+			</div>
+			<div class="mui-input-row">
+				<label>密码</label>
+				<input name="pwd" type="text" class="mui-input-clear" placeholder="请输入密码">
+			</div>
+			<div class="mui-button-row">
+				<button class="mui-btn mui-btn-primary js-login">登录</button>&nbsp;&nbsp;
+				<a class="to-reg js-to-reg" href="javascript:void(0);">加入我们</a>
+			</div>
+		</form>
+		<form class="mui-input-group form-reg js-form-reg">
+			<div class="mui-input-row">
+				<label>账号</label>
+				<input name="name" type="text" class="mui-input-clear" placeholder="手机号或邮箱">
+			</div>
+			<div class="mui-input-row">
+				<label>密码</label>
+				<input name="pwd" type="password" class="mui-input-clear" placeholder="请输入密码">
+			</div>
+			<div class="mui-button-row">
+				<button class="mui-btn mui-btn-primary js-reg">注册</button>&nbsp;&nbsp;
+				<a class="to-reg js-to-login" href="javascript:void(0);">返回登陆</a>
+			</div>
+		</form>
+	</div>
+	<script src='../js/lib/jquery.js'></script>
+	<script src="../js/lib/require.js" data-main="../js/controller/login"></script>
+</body>
+</html>

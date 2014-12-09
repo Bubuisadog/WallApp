@@ -81,7 +81,7 @@ define([
 		Topic.getTopicListByWallId(wall.key)
 		.done(function(data){
 			console.log('TopicList接口返回数据：', data);
-			if(data.total === 0) return alert('TopicList接口数据为空');
+//			if(data.total === 0) return alert('TopicList接口数据为空');
 			var topicListHtml = Template.tmpl(tplTopicList, {data: data.datas, wall: wall});
 //			self.endPulldownToRefresh();
 //			alert(topicListHtml);
@@ -152,8 +152,8 @@ define([
 				words: $topicInput.val() || ''
 			}
 			var user = {
-				name: '匿名',
-				headImg: 'http://quc.qhimg.com/dm/180_180_100/t01dc0216d6139b3426.jpg'
+				name: plus.storage.getItem('username') || '匿名',
+				headImg: 'http://p0.qhimg.com/dm/180_180_80/d/inn/5c8dc45f/head/03.jpg'
 			};
 //			mui.fire(contentPage, 'addTopic', {
 //				wall: wall,

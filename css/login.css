@@ -1,0 +1,24 @@
+.mui-content-padded {
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	width: 100%;
+}
+.to-reg {
+	font-size: 0.8em;
+	position: relative;
+	top: 5px;
+}
+
+.form-login {
+	
+}
+.form-reg {
+	display: none;	
+}
+.page--reg .form-login {
+	display: none;
+}
+.page--reg .form-reg {
+	display: block;
+}

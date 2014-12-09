@@ -2,3 +2,30 @@
 	/*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
 	margin-top: -1px;
 }
+
+.wall-item {
+	/*min-width: 240px;*/
+}
+.wall-item-content {
+	float: left;
+}
+	.wall-item-content__count {
+		font-size: .7em;
+	}
+
+/**********************************************************
+ * 为walllist重写icon
+ *********************************************************/
+.icon2 {
+	width: 30px;
+	height: 33px;
+	margin-right: 10px;
+	position: relative;
+	top: 3px;
+	float: left;
+}
+	.icon--cup { background-position: 5px -256px; }
+	.icon--image { background-position: 1px -185px; }
+	.icon--earth { background-position: 0px -67px; }
+	.icon--headphone { background-position: 1px -127px; }
+	.icon--location { background-position: 3px -317px; }
