@@ -1,20 +1,71 @@
-.mui-content-padded {
-	position: absolute;
-	top: 50%;
-	margin-top: -50px;
-	width: 100%;
+html, body {
+	height: 100%;
 }
-.to-reg {
-	font-size: 0.8em;
-	position: relative;
-	top: 5px;
+body {
+	background: url(../img/login-bg.png) no-repeat;
+	background-size: 100%;
+	padding: 1em 1em 0 1em;
 }
-
-.form-login {
+.login-head {
+	text-align: center;
+	margin-top: 20%;
+	margin-bottom: 10px;;
+}
+.login-logo {
+	background: url(../img/login-logo.png) no-repeat;
+	background-size: 70px;
+	width: 70px;
+	height: 34px;
+	display: inline-block;
+}
+.login-body {
 	
 }
+	.login-body input {
+		background: rgba(255, 255, 255, .8);
+		border-radius: 0;
+		border: none;
+		margin: 0;
+	}
+	.login-body input:first-child {
+		border-bottom: 1px solid #adadad;
+		-webkit-border-top-right-radius: 2px;
+		-webkit-border-top-left-radius: 2px;
+	}
+	.login-body input:last-child {
+		-webkit-border-bottom-right-radius: 2px;
+		-webkit-border-bottom-left-radius: 2px;
+	}
+.login-btn, .reg-btn {
+	color: #fff;
+	padding: 10px 0;
+	margin-top: .8em;
+}
+	.login-btn:active, .reg-btn:active {
+		color: #000;
+	}
+	
+.login-footer {
+	height: 28px;
+	text-align: right;
+	position: absolute;
+	bottom:0;
+	right: 1em;
+}
+.login-footer a {
+	color: #fff;
+}
+.to-login {
+	display: none;
+}
+.page--reg .to-login {
+	display: inline;
+}
+.page--reg .to-reg {
+	display: none;
+}
 .form-reg {
-	display: none;	
+	display: none;
 }
 .page--reg .form-login {
 	display: none;

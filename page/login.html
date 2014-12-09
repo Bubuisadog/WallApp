@@ -10,38 +10,28 @@
     <link href="../css/login.css" rel="stylesheet"/>
 </head>
 <body>
-	<header class="mui-bar mui-bar-nav">
-		<h1 class="mui-title">来过</h1>
-	</header>
-	<div class="mui-content-padded">
-		<form class="mui-input-group form-login js-form-login">
-			<div class="mui-input-row">
-				<label>账号</label>
-				<input name="name" type="text" class="mui-input-clear" placeholder="手机号或邮箱">
-			</div>
-			<div class="mui-input-row">
-				<label>密码</label>
-				<input name="pwd" type="text" class="mui-input-clear" placeholder="请输入密码">
-			</div>
+	<div class="login-head">
+		<h1 class="login-logo"></h1>
+	</div>
+	<div class="login-body">
+		<form class="form-login js-form-login">
+			<input name="name" type="text" class="mui-input-clear" placeholder="手机号或邮箱">
+			<input name="pwd" type="text" class="mui-input-clear" placeholder="请输入密码">
 			<div class="mui-button-row">
-				<button class="mui-btn mui-btn-primary js-login">登录</button>&nbsp;&nbsp;
-				<a class="to-reg js-to-reg" href="javascript:void(0);">加入我们</a>
+				<button class="mui-btn mui-btn-block mui-btn-outlined login-btn js-login">登录</button>
 			</div>
 		</form>
-		<form class="mui-input-group form-reg js-form-reg">
-			<div class="mui-input-row">
-				<label>账号</label>
-				<input name="name" type="text" class="mui-input-clear" placeholder="手机号或邮箱">
-			</div>
-			<div class="mui-input-row">
-				<label>密码</label>
-				<input name="pwd" type="password" class="mui-input-clear" placeholder="请输入密码">
-			</div>
+		<form class="form-reg js-form-reg">
+			<input name="name" type="text" class="mui-input-clear" placeholder="手机号或邮箱">
+			<input name="pwd" type="text" class="mui-input-clear" placeholder="请输入密码">
 			<div class="mui-button-row">
-				<button class="mui-btn mui-btn-primary js-reg">注册</button>&nbsp;&nbsp;
-				<a class="to-reg js-to-login" href="javascript:void(0);">返回登陆</a>
+				<button class="mui-btn mui-btn-block mui-btn-outlined login-btn js-reg">注册</button>
 			</div>
 		</form>
+	</div>
+	<div class="login-footer">
+		<a href="javascript:void(0);" class="to-reg js-to-reg">加入我们</a>
+		<a href="javascript:void(0);" class="to-login js-to-login">我要登录</a>
 	</div>
 	<script src='../js/lib/jquery.js'></script>
 	<script src="../js/lib/require.js" data-main="../js/controller/login"></script>

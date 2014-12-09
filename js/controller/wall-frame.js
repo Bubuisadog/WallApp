@@ -153,7 +153,7 @@ define([
 			}
 			var user = {
 				name: plus.storage.getItem('username') || '匿名',
-				headImg: 'http://p0.qhimg.com/dm/180_180_80/d/inn/5c8dc45f/head/03.jpg'
+				headImg: 'http://p0.qhimg.com/dm/50_50_80/d/inn/5c8dc45f/head/03.jpg'
 			};
 //			mui.fire(contentPage, 'addTopic', {
 //				wall: wall,

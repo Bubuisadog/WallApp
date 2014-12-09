@@ -1,11 +1,11 @@
-<ul id="list" class="mui-table-view">
-	<li class="mui-table-view-cell mui-media js-topic-item" data-id="<%=data.id%>">
-		<img class="appui-topic-photo" src="<%=data.imgUrl%>">
-		<img class="mui-media-object mui-pull-left" src="<%=data.headImg%>">
-		<div class="mui-media-body">
-			<%=data.username%>
-			<p class="mui-ellipsis"><%=data.words%></p>
-			<span class="appui-like js-like-topic">赞</span>
-		</div>
-	</li>
-</ul>
+<div class="topic">
+	<% if( topic.imgUrl ) { %>
+	<img class="mui-media-object topic-photo" src="http://p5.qhimg.com/t010be718abebc8763a.jpg" />
+	<% } %>
+	<div class="mui-media-body topic-content"><%=topic.words%></div>
+	<div class="appui-topic-info">
+		<div class="topic-author"><%=topic.username%></div>
+		<div class="topic-comment-num">评论<i><%=topic.comment_count></i></div>
+		<div class="appui-like"><i><%=topic.like%></i><i class="icon iconfont">&#xe669;</i></div>
+	</div>
+</div>
