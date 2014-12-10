@@ -5,9 +5,9 @@
 define([], function(){
 	'use strict';
 	
-//	var host = 'http://210.52.217.236';
+	var host = 'http://210.52.217.236';
 //	var host = 'http://182.118.20.208';
-	var host = 'http://10.16.29.102:8080';
+//	var host = 'http://10.16.29.102:8080';
 	var path = {
 		existUser: '/user/existUser', //?name=222
 		add: '/user/add', //?name=222&pwd=bbb
@@ -55,7 +55,10 @@ define([], function(){
 					name: user.name,
 					pwd: user.pwd
 				},
-				dataType: 'json'
+				dataType: 'json',
+				success: function(data){
+					alert(JSON.stringify(data));
+				}
 			});
 		}
 	};
