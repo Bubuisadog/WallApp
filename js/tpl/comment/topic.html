@@ -1,0 +1,12 @@
+<div class="topic">
+	<% if( data.imgUrl != '' ){ %>
+	<img class="mui-media-object topic-photo" src="<%=data.imgUrl%>" />
+	<div class="mui-media-body topic-content"><p><%=data.words%></p></div>
+	<% }else{ %>
+	<div class="mui-media-body topic-content topic-no-photo"><p><%=data.words%></p></div>	
+	<% } %>	
+	<div class="appui-topic-info">
+		<div class="topic-author"><%=data.username%></div>		
+		<div class="appui-like">4<i class="iconfont">&#xe669;</i></div>
+	</div>
+</div>

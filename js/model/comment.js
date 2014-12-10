@@ -15,36 +15,49 @@ define([], function(){
 	return {
 		/*************************************************************************************
 		 * 根据留言id获取评论列表
-		 * @param {Number} topicId
-		 * @param {Number} start
-		 * @param {Number} count
+		 * @param {Number} options[topicId]
+		 * @param {Number} options[start]
+		 * @param {Number} options[count]
 		 */
-		getCommentListByTopicId: function(topicId, start, count){
-			return $.ajax({
+		getCommentListByTopicId: function(options, ret, err){
+			mui.ajax({
 				url: host + path.getCommentListByTopicId,
 				data: {
-					mid: topicId || '',
-					start: start || 0,
-					count: count || 10
+					mid: options['topicId'] || '',
+					start: options['start'] || 0,
+					count: options['count'] || 10
 				},
-				dataType: 'json'
+				dataType: 'json',
+				success : function(data){
+					ret(data);
+				},
+				error : function(data){
+					err(data);
+				}
 			});
 		},
 		/*************************************************************************************
 		 * 添加一条评论
-		 * @param {Number} topicId
-		 * @param {Number} userId
-		 * @param {String} text
+		 * @param {Number} options[topic]
+		 * @param {Number} options[user]
+		 * @param {String} options[content]
 		 */
-		addComment: function(topic, comment, user){
-			return $.ajax({
-				url: host + path.addComment,
+		addComment: function(options, ret, err){			
+			mui.ajax({
+				url: host + path.addComment,				
 				data: {
-					mid: topic.id,
-					wName: topic.wallName,
-					content: comment.content
+					mid: options['topic'].topicId,
+					wallName: options['topic'].wallName,
+					user : options['user'],
+					content: options['content']
 				},
-				dataType: 'json'
+				dataType: 'json',
+				success : function(data){
+					ret(data);
+				},
+				error : function(data){
+					err(data);
+				}
 			});
 		}
 	};

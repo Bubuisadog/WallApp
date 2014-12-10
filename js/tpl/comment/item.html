@@ -1,0 +1,20 @@
+<% var comment = data; %>
+<% if(comment['isFirst']){ %>
+<ul class="mui-table-view">	
+<% } %>
+<li class="mui-table-view-cell mui-media comment-item" comment-id="<%=comment['id']%>">
+	<% if(comment['headImg'] != ''){ %>
+	<img class="mui-media-object mui-pull-left comment-head-img" src="<%=comment['headImg']%>">
+	<% } %>
+	<div class="mui-media-body">
+		<%=comment['username']%>
+		<p class="mui-ellipsis"><%=comment['content']%></p>
+	</div>
+	<div class="mui-media-foot">
+		<% var dot = (comment['is_dot']==1)?'actived':''; %>
+		<div class="appui-like"><%=comment['like']%><i class="iconfont <%=dot%>">&#xe669;</i></div>
+	</div>	
+</li>
+<% if(comment['isFirst']){ %>
+</ul>	
+<% } %>
